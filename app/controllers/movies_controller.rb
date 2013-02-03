@@ -62,13 +62,3 @@ end
     redirect_to movies_path
   end
 
-
-private
-
-def sort_column
-  Movie.column_names.include?(params[:sort]) ? params[:sort] : "rating"
-end
-
-def sort_direction 
-  %w[asc].include?(params[:direction]) ? params[:direction] :"asc"
-end
