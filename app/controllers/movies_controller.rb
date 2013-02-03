@@ -11,8 +11,6 @@ class MoviesController < ApplicationController
 
   @movies = Movie.order(sort_column + " " + sort_direction)
 
-  @style = "hilite"
-
 
   end
 
@@ -49,7 +47,7 @@ end
 private
 
 def sort_column
-  Movie.column_names.include?(params[:sort]) ? params[:sort] : nil
+  Movie.column_names.include?(params[:sort]) ? params[:sort] : "nil"
 end
 
 def sort_direction
