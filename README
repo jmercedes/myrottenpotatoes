@@ -28,6 +28,50 @@ link:files/vendor/rails/actionpack/README.html.
 
 == Getting Started
 
+<<<<<<< HEAD
+=======
+NOTE: The steps below are for creating a new app.  The initial version
+of RottenPotatoes was created with Rails 3.0.5 and Ruby 1.8.7 using the
+commands:
+
+* <tt>rails new rottenpotatoes -J -T</tt> (creates a new app without
+including JavaScript templates and without creating directories for
+Test::Unit, since we use RSpec instead)
+* <tt>cd rottenpotatoes</tt>
+* <tt>rails generate resource movie title:string rating:string
+description:text released_on:datetime</tt> (generates a skeleton model,
+RESTful controller, RESTful views, test skeletons, and a database
+migration for a RESTful resource called 'movie')
+* <tt>rake db:migrate</tt> (runs the migration to setup the Movies table)
+* <tt>rails generate cucumber:install</tt> (generates files and
+directories needed by Cucumber)
+* <tt>rails generate rspec:install</tt>  (generates files and
+directories needed by RSpec)
+* <tt>rm public/index.html</tt>  (removes the default static homepage installed
+by Rails)
+
+and then filling in the basic code for the Movie model, views and controller.
+
+1. At the command prompt, create a new Rails application:
+       <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
+
+2. Change directory to <tt>myapp</tt> and start the web server:
+       <tt>cd myapp; rails server</tt> (run with --help for options)
+
+3. Go to http://localhost:3000/ and you'll see:
+       "Welcome aboard: You're riding Ruby on Rails!"
+
+4. Follow the guidelines to start developing your application. You can find
+the following resources handy:
+
+* The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
+* Ruby on Rails Tutorial Book: http://www.railstutorial.org/
+
+
+
+== Getting Started
+
+>>>>>>> 6aae79b8a3fe208d175189f1fed7cb7c9d1555b3
 1. At the command prompt, create a new Rails application:
        <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
 
