@@ -1,5 +1,5 @@
 class CreateMovies < ActiveRecord::Migration
-  def self.up
+  def up
     create_table :movies do |t|
       t.string :title
       t.string :rating
@@ -9,7 +9,7 @@ class CreateMovies < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     drop_table :movies
   end
 end
