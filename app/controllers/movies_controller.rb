@@ -44,9 +44,9 @@ end
 private
 
 def sort_column
-  Movie.column_names.include?(params[:sort]) ? params[:sort] : "title"
+  Movie.column_names.include?(params[:sort]) ? params[:sort] : "rating"
 end
 
-def sort_direction
-  %w[asc desc].include?(params[:direction]) ? params[:direction] :"desc"
+def sort_direction 
+  %w[asc].include?(params[:direction]) ? params[:direction] :"asc"
 end
