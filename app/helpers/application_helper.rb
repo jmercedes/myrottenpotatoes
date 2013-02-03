@@ -3,12 +3,6 @@ module ApplicationHelper
 	def sortable(column, title=nil)
 		title ||= column.titleize
 
-		#if sort_column == column
-		#	@current = "hilite"
-		#else sort_column == "release_date"
-		#	@current = "hilite"
-		#end
-
 		if column == "title"
 			current = "movie_title_header"
 		elsif column == "release_date"

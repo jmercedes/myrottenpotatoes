@@ -49,7 +49,7 @@ end
 private
 
 def sort_column
-  Movie.column_names.include?(params[:sort]) ? params[:sort] : "title"
+  Movie.column_names.include?(params[:sort]) ? params[:sort] : nil
 end
 
 def sort_direction
