@@ -8,10 +8,22 @@ class MoviesController < ApplicationController
   end
 
   def index
-  @movies = Movie.order(sort_column + " " + sort_direction)
+    if params[:sort_order].nil?
+      if params[:ratings].nil?
+        @movies = Movie.all
+      else
+        @movies = Movie.find(:all, :conditions => { :rating => params[:ratings].keys })
+      end
+    elsif 'by_title' == params[:sort_order]
+      @movies = Movie.find(:all, :order => :title)
+    elsif 'by_release_date' == params[:sort_order]
+      @movies = Movie.find(:all, :order => :release_date)
+    end
+    @all_ratings = Movie.all_ratings
+  end
+  
   end
 
-end
   def new
     # default: render 'new' template
   end
